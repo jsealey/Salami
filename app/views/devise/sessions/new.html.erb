@@ -1,5 +1,5 @@
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <% if devise_error_messages! %>
+  <% if resource.errors.any? %>
     <div class="alert-box alert">
       <%= devise_error_messages! %>
       <a href="" class="close">&times;</a>
