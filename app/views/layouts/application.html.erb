@@ -1,14 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chicoprocess</title>
+  <title>Chico Process</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<!-- Navigation -->
+	<div class="fixed contain-to-grid">
+	<nav class="top-bar">
+    <ul>
+      <li class="name"><h1><%=link_to "Chico Process", root_path() %></h1></li>
+      <li class="toggle-topbar"><a href="#"></a></li>
+    </ul>
+ 
+    <section>
+      <ul class="left">
+        <%= nav_link "Old Website", home_oldwebsite_path %>
+      </ul>
+      <% if user_signed_in? %>
+      <ul class="right">
+        
+        <li class="has-dropdown">
+          <%= link_to "Profile", edit_user_registration_path %>
+ 
+          <ul class="dropdown">
+            <%= nav_link 'Edit', edit_user_registration_path %>
+            <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+          </ul>
+        </li> -->
+      </ul>
+      <% else %>
+      <!-- <ul class="right">
+	      <li class="has-button">
+	      	<%#= link_to "Sign In", user_session_path, :class => 'small button' %>
+	      </li>
+      </ul> -->
+	  <%= render "devise/sessions/new" %>
+      <% end %>
+    </section>
+  </nav>
+</div>
+  <!-- End Navigation -->
 
-<%= yield %>
+   <br />
+   <div class="row">
+   	    <% if notice %>
+      <div class="alert-box success">
+        <%= notice %>
+        <a href="" class="close">&times;</a>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div class="alert-box alert">
+        <%= alert %>
+        <a href="" class="close">&times;</a>
+      </div>
+    <% end %>
+    <div class="twelve columns">
+      <br />
+      <%= yield %>
 
-</body>
+      <!-- Footer -->
+      <footer class="row">
+        <div class="twelve columns"><hr />
+            <div class="row">
+ 
+              <div class="six columns">
+                  <p>&copy; CSU Chico</p>
+              </div> 
+            </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+      </div>
+    </div>
+  </body>
 </html>

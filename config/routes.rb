@@ -1,5 +1,8 @@
 Chicoprocess::Application.routes.draw do
+  devise_for :users
+
   get "home/index"
+  match 'home/oldwebsite' => 'home#oldwebsite'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
