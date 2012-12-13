@@ -1,0 +1,18 @@
+
+
+#error_explanation > h2 {
+  padding-left: 1em;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  font-size: 1.5em;
+  color: white;
+}
+
+#error_explanation > ul {
+  padding-left: 3em;
+  margin-bottom: 0 !important;
+}
+
+.notice {
+  color: green;
+}
