@@ -36,7 +36,7 @@
     <section>
       <ul class="left">
         <%= nav_link "Home", root_path %>
-        <%= nav_link "Old Website", home_oldwebsite_path %>
+        <%= nav_link "Old Websites", home_oldwebsite_path %>
       </ul>
       <% if user_signed_in? %>
       <ul class="right">
@@ -51,12 +51,7 @@
         </li> -->
       </ul>
       <% else %>
-      <!-- <ul class="right">
-	      <li class="has-button">
-	      	<%#= link_to "Sign In", user_session_path, :class => 'small button' %>
-	      </li>
-      </ul> -->
-	  <%= render "devise/sessions/new" %>
+	      <%= render "devise/sessions/new" %>
       <% end %>
     </section>
   </nav>
@@ -93,7 +88,7 @@
         </div>
       </footer>
       <!-- End Footer -->
-
+      
       </div>
     </div>
   </body>
