@@ -59,7 +59,7 @@
   <!-- End Navigation -->
 
    <br />
-   <div class="row">
+   <div class="row" <%=current_page?(home_oldwebsite_path) ? "style=width:1500px;" : ''%>>
    	    <% if notice %>
       <div class="alert-box success">
         <%= notice %>
