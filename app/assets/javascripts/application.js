@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require onloadfunc
 //= require foundation
 //= require foundation/app
+//= require onloadfunc
