@@ -4,14 +4,14 @@ class AdminController < ApplicationController
   def index
   	if params.has_key?(:search)
   	  if params.has_key?(:page)
-  	    @users = User.where("email like ?", "%#{params[:search]}%").page(params[:page]).per(2)
+  	    @users = User.where("email like ?", "%#{params[:search]}%").page(params[:page]).per(10)
   	    @count = User.where("email like ?", "%#{params[:search]}%").count
   	  else
-  	    @users = User.where("email like ?", "%#{params[:search]}%").page(1).per(2)
+  	    @users = User.where("email like ?", "%#{params[:search]}%").page(1).per(10)
   	    @count = User.where("email like ?", "%#{params[:search]}%").count
   	  end
   	else
-  	  @users = User.page(params[:page]).per(2)
+  	  @users = User.page(params[:page]).per(10)
   	  @count = User.count
   	end
   end
