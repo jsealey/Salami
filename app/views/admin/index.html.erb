@@ -1,0 +1,63 @@
+<h2>Manage User Accounts</h2><br />
+<!-- Postfix action -->
+<div class="row collapse five columns">
+  <div class="ten mobile-three columns">
+  <% if params.has_key?(:search) and params[:search] != "" %>
+
+  <%= form_for "/admin" do %>
+    <%= text_field_tag :search, params[:search] %>
+  </div>
+  <div class="two mobile-one columns">
+    <%= submit_tag "Search", :class => "button postfix" %>
+  <% end %>
+	<%= form_for "/admin" do %>
+	    <%= text_field_tag :search, "", :style => "display: none;" %>
+	    <%= submit_tag "Clear", :class => "secondary button postfix" %>
+	<% end %>
+  <% else %>
+
+    <%= form_for "/admin" do %>
+    <%= text_field_tag :search, params[:search] %>
+  </div>
+  <div class="two mobile-one columns">
+    <%= submit_tag "Search", :class => "button postfix" %>
+  <% end %>
+  <% end %>
+  </div>
+  <div class="two mobile-one columns">
+  	<span class="secondary label">Total Results: <%= @count %></span>
+  </div>
+</div>
+
+
+<div class="row">
+    <div class="twelve columns">
+      <%= paginate @users, :params => {:search => params[:search]} %>
+    	<table class="twelve">
+    	  <thead>
+		    <tr>
+		      <th>Email</th>
+		      <th>Sign Up Date</th>
+		      <th>Time Since Last Login</th>
+		      <th>Sign In Count</th>
+		      <th>Is an admin account?</th>
+		      <th>Login As User</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+	        <% @users.each do |a| %>
+		    <tr>
+	          <td><%= a.email %></td>
+	          <td><%= a.created_at %></td>
+	          <td>Days:<%= ((Time.now - a.last_sign_in_at).to_i / 86400) % 86400 %> Hours:<%= ((Time.now - a.last_sign_in_at).to_i / 3600)%3600 %> Minutes:<%= ((Time.now - a.last_sign_in_at).to_i / 60) %60 %></td>
+	          <td><%= a.sign_in_count %></td>
+	          <td><%= a.admin? ? 'yes' : 'no' %></td>
+	          <td><%= link_to 'Login', "/admin/#{a.id}/become", :class => 'button' %></td>
+		    </tr>
+		   <% end %>
+		  </tbody>
+		</table>
+      <%= paginate @users, :params => {:search => params[:search]} %>
+    </div>
+	<hr />
+</div>

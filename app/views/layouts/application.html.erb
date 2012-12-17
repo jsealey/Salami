@@ -3,24 +3,6 @@
 <head>
   <title>Chico Process</title>
   <%= stylesheet_link_tag    "application" %>
-  <style type="text/css">
-#error_explanation > h2 {
-  padding-left: 1em;
-  margin-bottom: 0 !important;
-  margin-top: 0 !important;
-  font-size: 1.5em;
-  color: white;
-}
-
-#error_explanation > ul {
-  padding-left: 3em;
-  margin-bottom: 0 !important;
-}
-
-.notice {
-  color: green;
-}
-  </style>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width"/>
@@ -38,6 +20,9 @@
       <ul class="left">
         <%= nav_link "Home", root_path %>
         <%= nav_link "Old Websites", home_oldwebsite_path %>
+        <% if current_user.try(:admin?) %>
+          <%= nav_link "Admin", admin_path %>
+        <% end %>
       </ul>
       <% if user_signed_in? %>
       <ul class="right">

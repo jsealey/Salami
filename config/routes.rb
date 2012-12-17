@@ -3,6 +3,8 @@ Chicoprocess::Application.routes.draw do
 
   get "home/index"
   match 'home/oldwebsite' => 'home#oldwebsite'
+  match 'admin' => 'admin#index'
+  match 'admin/:id/become' => 'admin#become'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
