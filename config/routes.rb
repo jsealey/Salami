@@ -2,7 +2,6 @@ Chicoprocess::Application.routes.draw do
   devise_for :users
 
   get "home/index"
-  match 'home/oldwebsite' => 'home#oldwebsite'
   match 'admin' => 'admin#index'
   match 'admin/:id/become' => 'admin#become'
 
