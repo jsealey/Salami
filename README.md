@@ -2,10 +2,10 @@
 
 Salami is a Ruby on Rails template created to serve as a starting point for quickly deploying a usable web application with the following features:
 
-* User/Admin accounts with Devise
-* Foundation for cross-platform compatible styles
-* Admin management interface with User searching and "login as user" functionality
-* Heroku compatible to provide a fast and easy development cycle
+* [Devise](https://github.com/plataformatec/devise) for User/Admin accounts
+* [Foundation](http://foundation.zurb.com) for cross-platform compatible styles
+* Admin management interface with [kaminari](https://github.com/amatsuda/kaminari) for paginated searching of users and "login as user" functionality
+* 100% Heroku compatible to provide a fast and easy development cycle
 
 ## Getting Started
 
