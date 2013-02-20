@@ -7,7 +7,7 @@ Salami is a Ruby on Rails template created to serve as a starting point for quic
 * Admin management interface with [kaminari](https://github.com/amatsuda/kaminari) for paginated searching of users and "login as user" functionality
 * 100% Heroku compatible to provide a fast and easy development cycle
 
-See an example of the deployed application [here](http://salami.herokuapp.com/)
+<a href="http://salami.herokuapp.com/" target="_blank">Sample deployed application</a>
 
 ## Getting Started
 
