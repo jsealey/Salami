@@ -17,6 +17,7 @@ then...
     $ cd Salami
     $ bundle install
     $ rake assets:precompile
+    $ rake db:migrate
     $ rails s
 
 now your server should be running locally at [localhost:3000](http://localhost:3000).
