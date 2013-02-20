@@ -11,7 +11,7 @@ Salami is a Ruby on Rails template created to serve as a starting point for quic
 
 ## Getting Started
 
-First, you must ensure that you have [Ruby on Rails installed](http://rubyonrails.org/download.)
+First, you must ensure that you have <a href="http://rubyonrails.org/download" target="_blank">Ruby on Rails installed</a>.
 
 then...
 
@@ -22,15 +22,15 @@ then...
     $ rake db:migrate
     $ rails s
 
-now your server should be running locally at [localhost:3000](http://localhost:3000).
+now your server should be running locally at <a href="http://localhost:3000" target="_blank">localhost:3000</a>.
 *pat yourself on the back for getting this far*
 
 # Deploy to Heroku
 
-now lets take this a step farther and go through the steps to deploy your awesome new website to [Heroku](http://www.heroku.com) web hosting so everyone can see how awesome it is! 
+now lets take this a step farther and go through the steps to deploy your awesome new website to <a href="http://www.heroku.com" target="_blank">Heroku</a> web hosting so everyone can see how awesome it is! 
 
-First, you must [create a heroku account](https://api.heroku.com/signup).
-Then you must install [Heroku toolbelt command line tool](https://toolbelt.herokuapp.com).
+First, you must <a href="https://api.heroku.com/signup" target="_blank">create a heroku account</a>.
+Then you must install <a href="https://toolbelt.herokuapp.com" target="_blank">Heroku toolbelt command line tool</a>.
 
 If you haven't already done so during Heroku command line tool setup, be sure to run the following command and enter your login credentials for Heorku.
 
