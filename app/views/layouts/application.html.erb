@@ -19,7 +19,6 @@
     <section>
       <ul class="left">
         <%= nav_link "Home", root_path %>
-        <%= nav_link "Old Websites", home_oldwebsite_path %>
         <% if current_user.try(:admin?) %>
           <%= nav_link "Admin", admin_path %>
         <% end %>

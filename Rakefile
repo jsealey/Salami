@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Chicoprocess::Application.load_tasks
+Salami::Application.load_tasks
