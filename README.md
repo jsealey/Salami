@@ -1,6 +1,6 @@
 # Salami for Rails
 
-Salami as a Ruby on Rails template created to serve as a starting point for quickly deploying a usable web application with the following features:
+Salami is a Ruby on Rails template created to serve as a starting point for quickly deploying a usable web application with the following features:
 
 * User/Admin accounts with Devise
 * Foundation for cross-platform compatible styles
@@ -9,14 +9,14 @@ Salami as a Ruby on Rails template created to serve as a starting point for quic
 
 ## Getting Started
 
-First, you must ensure that you have Ruby and Rails installed.(link)
+First, you must ensure that you have [Ruby on Rails installed](http://rubyonrails.org/download.)
 
 then...
 
     $ git clone git@github.com:jsealey/Salami.git
     $ cd Salami
-    $ rake assets:precompile
     $ bundle install
+    $ rake assets:precompile
     $ rails s
 
 now your server should be running locally at [localhost:3000](http://localhost:3000).
@@ -25,11 +25,11 @@ now your server should be running locally at [localhost:3000](http://localhost:3
 # Deploy to Heroku
 
 now lets take this a step farther and go through the steps to deploy your awesome new website to [Heroku](http://www.heroku.com) web hosting so everyone can see how awesome it is! 
-https://api.heroku.com/signup
+
 First, you must [create a heroku account](https://api.heroku.com/signup).
 Then you must install [Heroku toolbelt command line tool](https://toolbelt.herokuapp.com).
 
-If you haven't already done so during Heroku command line tool setup, be sure to run the following command and enter your login credentials.
+If you haven't already done so during Heroku command line tool setup, be sure to run the following command and enter your login credentials for Heorku.
 
     $ heroku login
 
@@ -37,17 +37,17 @@ Enter the next line to have Heroku create a virtual server for your new website
 
     $ heroku create
 
-Now Heroku should have added a new git remote named `heroku` (you can see all of your remotes with `git remote`) so you should be able to easily run the following to deploy your website!
+Now Heroku should have added a new git remote named `heroku` (you can see all of your remotes with `git remote`) so you should be able to run the following to deploy your website!
 
     $ git push heroku master
 
-Next we have to tell Heroku to migrate the database so we Rails has the database in place to talk to!
+Next we have to tell Heroku to migrate the database so Rails has the database in place to talk to!
 
     $ heroku run rake db:migrate
 
 If everything goes smoothly, you should now be able to see your website LIVE with the following command
 
-   $ heroku open
+    $ heroku open
 
 *give yourself another pat on the back for being super awesome and getting this far*
 
